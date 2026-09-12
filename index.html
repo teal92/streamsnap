@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="StreamSnap helps its operator turn livestream moments into vertical social clips and publish them to authorized accounts.">
+    <title>StreamSnap | Livestream Clip Publishing</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080d18'/%3E%3Cpath d='M17 18h30v8H25v8h18v8H25v12h-8z' fill='%237c5cff'/%3E%3Cpath d='M42 31l10 7-10 7z' fill='%2328e0b9'/%3E%3C/svg%3E">
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #080d18;
+            --panel: #101827;
+            --line: #26344c;
+            --text: #eff5ff;
+            --muted: #aab8cf;
+            --violet: #8b6cff;
+            --mint: #28e0b9
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: radial-gradient(circle at 85% 5%, #18213d 0, transparent 35%), var(--bg);
+            color: var(--text);
+            font: 16px/1.65 system-ui, -apple-system, Segoe UI, sans-serif
+        }
+
+        a {
+            color: var(--mint)
+        }
+
+        .wrap {
+            width: min(960px, calc(100% - 36px));
+            margin: auto
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 0
+        }
+
+        .brand {
+            color: var(--text);
+            font-weight: 800;
+            letter-spacing: .06em;
+            text-decoration: none
+        }
+
+        .brand span {
+            color: var(--violet)
+        }
+
+        nav a {
+            margin-left: 22px;
+            color: var(--muted);
+            text-decoration: none
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: var(--text)
+        }
+
+        main {
+            padding: 72px 0 88px
+        }
+
+        .eyebrow {
+            color: var(--mint);
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            font-size: .78rem
+        }
+
+        h1 {
+            max-width: 760px;
+            margin: .4rem 0 1rem;
+            font-size: clamp(2.6rem, 7vw, 5.4rem);
+            line-height: 1.02;
+            letter-spacing: -.055em
+        }
+
+        .lead {
+            max-width: 680px;
+            color: var(--muted);
+            font-size: 1.18rem
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 54px 0
+        }
+
+        .card {
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: linear-gradient(145deg, rgba(16, 24, 39, .94), rgba(12, 18, 31, .8))
+        }
+
+        .card b {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text)
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted)
+        }
+
+        .notice {
+            padding: 22px 24px;
+            border-left: 3px solid var(--violet);
+            background: rgba(139, 108, 255, .08);
+            color: var(--muted)
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 28px 0 40px;
+            color: var(--muted);
+            font-size: .92rem
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .foot a {
+            margin-left: 18px
+        }
+
+        @media(max-width:720px) {
+
+            .nav,
+            .foot {
+                align-items: flex-start;
+                flex-direction: column
+            }
+
+            .nav nav a {
+                margin: 0 18px 0 0
+            }
+
+            .grid {
+                grid-template-columns: 1fr
+            }
+
+            main {
+                padding-top: 42px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="wrap nav">
+        <a class="brand" href="index.html">STREAM<span>SNAP</span></a>
+        <nav aria-label="Legal"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></nav>
+    </header>
+    <main class="wrap">
+        <p class="eyebrow">Livestream clip workflow</p>
+        <h1>From live moment to vertical clip.</h1>
+        <p class="lead">StreamSnap is an operator-controlled media tool that identifies notable livestream moments,
+            prepares short-form vertical clips, and publishes approved clips to social accounts the operator has
+            explicitly connected.</p>
+        <section class="grid" aria-label="How StreamSnap works">
+            <article class="card"><b>Monitor</b>
+                <p>Analyze authorized public livestream sources for activity and potential moments.</p>
+            </article>
+            <article class="card"><b>Review</b>
+                <p>Prepare clips for human review, including formatting, captions, titles, and descriptions.</p>
+            </article>
+            <article class="card"><b>Publish</b>
+                <p>Send only operator-approved clips to connected platforms through their official APIs.</p>
+            </article>
+        </section>
+        <div class="notice">StreamSnap does not ask for social-account passwords. Connections use each platform’s
+            authorization process, and publishing access can be revoked from the platform account.</div>
+    </main>
+    <footer>
+        <div class="wrap foot"><span>© 2026 StreamSnap. All rights reserved.</span><span><a href="terms.html">Terms of
+                    Service</a><a href="privacy.html">Privacy Policy</a></span></div>
+    </footer>
+</body>
+
+</html>
